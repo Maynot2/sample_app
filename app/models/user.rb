@@ -9,4 +9,5 @@ class User < ApplicationRecord
                       #       - A pair of virtual attributes(password and password_confirmation), including presence validations upon object creation and a validation requiring that they match
                       #       - An authenticate method that returns the user when the password is correct (and false otherwise)
   validates :password, presence: true, length: { minimum: 6 }
+  validates :password_confirmation, presence: true
 end
